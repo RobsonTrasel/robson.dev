@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from './ui/button'
 import { Download, Send } from 'lucide-react'
 import {
@@ -10,6 +11,7 @@ import {
 
 import DevImage from './DevImage'
 import Badge from './Badge'
+import Socials from './Socials'
 
 const Hero = () => {
   return (
@@ -35,8 +37,25 @@ const Hero = () => {
                 Baixar CV <Download size={18} />
               </Button>
             </div>
+            <Socials
+              containerStyles="flex gap-x-6 mx-auto xl:mx-0"
+              iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+            />
           </div>
-          <div className="hidden xl:flex relative">Text</div>
+          <div className="hidden xl:flex relative">
+            <div className="w-[510px] h-[470px] relative">
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary">
+                <Image
+                  style={{ clipPath: 'url(#blobClipPath)' }}
+                  src="/assets/hero/logo.png"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-full"
+                  alt="dev image"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
