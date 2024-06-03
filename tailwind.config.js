@@ -73,6 +73,9 @@ module.exports = {
       },
       backgroundImage: {
         hero: 'url(/assets/hero/hero-bg.png)',
+        hero_shape: 'url(/assets/hero/shape-1.svg)',
+        hero_shape2_light: 'url(/assets/hero/shape-2-light.svg)',
+        hero_shape2_dark: 'url(/assets/hero/shape-2-dark.svg)',
       },
     },
   },
